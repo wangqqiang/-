@@ -19,23 +19,30 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "选择城市",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
-    "color": "#000000",
-    "selectedColor": "#D2A264",
-    "list": [{
-      "pagePath": "pages/movie/movie",
-      "text": "电影"
-    },
-    {
-      "pagePath": "pages/product/product",
-      "text": "卖品"
-    },
-    {
-      "pagePath": "pages/person/person",
-      "text": "我的"
-    }]
+    "color": "#000",
+    "selectedColor": "#F1E921",
+    "list": [
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "电影",
+        "iconPath": "public/tabbar_icon/movie_gray.png",
+        "selectedIconPath": "public/tabbar_icon/movie_gold.png"
+      },
+      {
+        "pagePath": "pages/product/product",
+        "text": "卖品",
+        "iconPath": "public/tabbar_icon/product_gray.png",
+        "selectedIconPath": "public/tabbar_icon/product_gold.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "public/tabbar_icon/person_gray.png",
+        "selectedIconPath": "public/tabbar_icon/person_gold.png"
+      }
+    ]
   }
 }
