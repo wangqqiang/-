@@ -1,0 +1,37 @@
+<!--pages/person/person.wxml-->
+<view class="person">
+  <!-- 头像 -->
+  <view class='person-header'>
+   <view class="header-avatar">
+    <image class="avatarImg {{!islogin ? 'fa fa-user-circle-o' : '' }}" 
+    src="{{avatar}}"></image>
+   </view>
+    <view class='person-info'>
+      <view class="person-nickname" bindtap='login'>{{nickname}}</view>
+      <view class="person-wxid" wx:if='{{islogin}}'>{{gender ? "男" : "女"}}</view>
+    </view>
+  </view>
+  <!-- 订单 -->
+  <view class='person-order'>
+    <!-- 影票订单 -->
+    <view class="ShadowTicket Grail" id="1" bindtap='sellorder'>
+      <text class="fa fa-film Grail1 faColor"></text>
+      <text class="Grail5">影票订单</text>
+      <text class="fa fa-angle-right Grail1"></text>
+    </view>
+    <!-- 卖品订单 -->
+    <view class="SellingGoods Grail" id="2" bindtap='sellorder'>
+      <i class="fa fa-gift Grail1 faColor"></i>
+      <text class='Grail5'>卖品订单</text>
+      <i class="fa fa-angle-right Grail1"></i>
+    </view>
+    <!-- 我的钱包 -->
+    <view class="wallet Grail" id="3" bindtap='sellorder'>
+      <i class="fa fa-cc-paypal Grail1 faColor"></i>
+      <text class='Grail5'>我的钱包</text>
+      <i class="fa fa-angle-right Grail1"></i>
+    </view>
+  </view>
+  <!-- 登录按钮 -->
+  <view class='person-login' wx:if="{{islogin == true}}" bindtap='loginout'>退出登录</view>
+</view>

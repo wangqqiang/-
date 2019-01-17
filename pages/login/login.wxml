@@ -1,0 +1,4 @@
+<!--pages/login/login.wxml-->
+<view class='login' style="background:url('../../public/images/poster.jpg'); background-size: cover;">
+  <button size='mini' type='primary' open-type='getUserInfo' bindgetuserinfo='userinfo'>微信账号快速登录</button>
+</view>

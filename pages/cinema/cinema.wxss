@@ -1,0 +1,23 @@
+/* pages/cinema/cinema.wxss */
+.cinema{
+  padding:0 20rpx;
+  border-bottom: 1px solid darkgray;
+}
+.CurrentCity{
+  padding: 20rpx;
+  background-color: rgb(230, 227, 227)
+}
+.title{
+  font-family: 800px;
+  color:black;
+  padding:25rpx 0;
+}
+.detailed{
+  width: 100%;
+  padding-bottom:25rpx;
+  font-size: 30rpx;
+  color:darkgray;
+  white-space : nowrap;
+  overflow:hidden;
+  text-overflow : ellipsis;
+}

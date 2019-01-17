@@ -1,0 +1,137 @@
+/* pages/order/order.wxss */
+page{
+  height: 100%;
+}
+.order{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(247, 245, 245);
+}
+.order-citys{
+  padding:0 10rpx;
+  background-color: #fff;
+}
+/* 卖品订单 */
+.order-cart{
+  background-color: #fff;
+}
+.order-info{
+  /* height: 200rpx; */
+  flex-direction: column;
+  color: rgb(194, 187, 187);
+  margin:0 10rpx;
+  border-bottom:1px dashed #999;
+}
+.order-commodity{
+  display: flex;
+  height: 70%;
+  padding:10rpx 0;
+}
+.Grid2{
+  flex: 1 0 10%;
+  display: flex;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+}
+.Grid6{
+  flex: 1 0 65%;
+  display: flex;
+  flex-direction: column;
+}
+.com{
+  padding: 10rpx;
+}
+.commoodity-title{
+  color: black;
+  font-size: 0.9rem;
+}
+.commoodity-content{
+  font-size: 0.8rem;
+  height: 40rpx;
+  overflow: hidden;
+}
+.commoodity-menir{
+  color: #D2A264;
+  font-size: 0.8rem;
+}
+.Grid4{
+  flex: 1 0 25%;
+}
+.orderCommodityImg{
+  height:170rpx;
+  border:1px solid rgb(204, 199, 199);
+}
+.order-price{
+  height: 100rpx;
+  line-height: 100rpx;
+  padding:0 15rpx;
+  background-color: #fff;
+}
+.priceLeft{
+  height:100%;
+  float: left;
+}
+.priceRight{
+  height:100%;
+  float: right;
+}
+/* 其他 */
+/* .other{
+ width:100%;
+} */
+.otherOffer{
+  width:98%;
+  height: 100rpx;
+  display: flex;
+  align-items:center;/*垂直居中*/
+  padding:0 10rpx;
+  margin-top:10rpx;
+  background-color:#fff;
+}
+.otherOffer5{
+  flex: 1 0 45%;
+  font-size: 1rem;
+}
+.voucher{
+  font-size: 0.8rem;
+  text-align: right;
+  padding-right: 10rpx;
+}
+.show-more{
+  height:80rpx;
+  line-height:80rpx;
+  font-size:0.8rem;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px solid rgb(204, 199, 199);
+}
+/* 立即支付 */
+.pay{
+  height: 100rpx;
+  width: 100%;
+  display: inline-block;
+  line-height: 100rpx;
+  background-color: #fff;
+  color: black;
+  position: fixed;
+  bottom: 0rpx;
+  left:0rpx;
+}
+.payPrice{
+  width: 70%;
+  background-color: #fff;
+  float:left;
+}
+.payPriceTitle{
+  padding-left: 20rpx;
+}
+.payPriceColor{
+  color: #D2A264;
+}
+.paybottom{
+  float:left;
+  width: 30%;
+  background-color: #D2A264;
+  color: white;
+  text-align: center;
+}

@@ -1,0 +1,70 @@
+<!--pages/product/product.wxml-->
+<view class="saleGoods">
+  <!-- 地图导航 -->
+  <view class="movie_title" bindtap='cinemas'>
+      <text class="fa fa-map-marker"></text>
+      <text class="mapName">{{cinema_info.cinemaName}}</text>
+      <text class="fa fa-angle-right jianto"></text>
+  </view>
+  <!-- 特惠套餐 -->
+  <view class="special">
+    <image class="taocanImg" src='../../public/images/taocan.png'></image>
+  </view>
+  <!-- 内容列表 -->
+  <view class='contentList'>
+    <view class='contentLeft contentCss'>
+      <!-- 商品标题 -->
+      <view class="SingleItem {{saleGood.id == dataIndex+1 ? 'active' : ''}}" 
+      wx:for='{{saleGoods}}' 
+      wx:for-item="saleGood" 
+      wx:key="{{saleGood.id}}" 
+      bindtap='setSaleData' 
+      id='{{saleGood.id}}'
+      >{{saleGood.title}}</view>
+    </view>
+    <view class='contentRight contentCss'>
+      <view class="specialRight"><text>{{saleGoods[dataIndex].title}}</text></view>
+      <!-- 单个商品 -->
+      <scroll-view class='commodity' scroll-y='true' scroll-top="70rpx">
+
+        <view class="productInfor"  wx:for='{{saleGoods[dataIndex].data}}' wx:for-item="saleGoodData" wx:key="{{saleGoodData.id}}">
+          <image class='listImg' src='{{saleGoodData.img}}'></image>
+          <view class="listRight">
+            
+            <view class="xiangxi">
+              <text class="flex-item movieName">{{saleGoodData.title}}</text>
+              <view class="flex-item actor">{{saleGoodData.des}}</view>
+              <view class="flex-item score">
+                <text>￥{{saleGoodData.price}}</text> 
+                <!-- 加减 -->
+                <view class='Quantity'>
+                  <text wx:if="{{saleGoodData.count > 0}}" class='fa fa-minus-circle scoreRight' bindtap='addMoney' data-goodsid="{{saleGoodData.id}}" data-type="0"></text>
+                  <text wx:if="{{saleGoodData.count > 0}}" class="count">{{saleGoodData.count}}</text>
+                  <text class='fa fa-plus-circle scoreRight' bindtap='addMoney' data-goodsId="{{saleGoodData.id}}" data-type="1"></text>
+                </view>
+                
+              </view>
+            </view>
+          </view>
+        </view>
+
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 结算 -->
+  <view class="settlement">
+    <view class="settlementLeft">
+       <!-- 购物车 -->
+      <view class="shopping" bindtap='showCartList'>
+        <i class="fa fa-shopping-cart"></i>
+        <i class="circle" wx:if="{{countMarker > 0}}">{{countMarker}}</i>
+      </view>
+
+      <text class="money">￥{{totalPrice}}</text>
+    </view>
+    <view bindtap='checkout' class="settlementRight {{isCartListEmpty ? '' : 'hasCartlist'}}">结算</view>
+  </view>
+  <!-- 模板部分 -->
+  <import src='template/cartlist.wxml' />
+  <template is='cart' data='{{list:cartlist}}' wx:if='{{isShowCartList}}'></template>
+</view>

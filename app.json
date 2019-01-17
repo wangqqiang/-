@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/citys/citys",
+    "pages/cinema/cinema",
+    "pages/movie/movie",
+    "pages/ticket/ticket",
+    "pages/details/details",
+    "pages/person/person",
+    "pages/sellorder/sellorder",
+    "pages/product/product", 
+    "pages/login/login",
+    "pages/order/order"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "选择城市",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#D2A264",
+    "list": [{
+      "pagePath": "pages/movie/movie",
+      "text": "电影"
+    },
+    {
+      "pagePath": "pages/product/product",
+      "text": "卖品"
+    },
+    {
+      "pagePath": "pages/person/person",
+      "text": "我的"
+    }]
+  }
+}

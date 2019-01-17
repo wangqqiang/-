@@ -1,0 +1,97 @@
+/* pages/sellorder/sellorder.wxss */
+page{
+  height: 100%;
+}
+.sellorder{
+  height: 100%;
+  background-color: rgb(247, 245, 245);
+}
+.sellorderBody{
+  width: 100%;
+}
+.sellorderList{
+  /* height: 100%; */
+  width: 100%;
+  background-color: #fff;
+  border-top:1px solid rgb(247, 245, 245);
+}
+.sellorderItem{
+  height: 300rpx;
+  margin:0 20rpx 20rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items:center;/*垂直居中*/
+  /* flex-wrap: wrap; */
+}
+.Items{
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items:center;/*垂直居中*/
+  justify-content: space-between; /*平分子元素的空间*/
+  font-size: 0.7rem;
+}
+.SHleft{
+  color:rgb(189, 184, 184);
+}
+.SHright{
+  color:rgb(199, 181, 81);
+}
+.sellorderItem-bordey{
+  width: 100%;
+  height: 45%;
+  border-top:1px dashed rgb(247, 245, 245);
+  border-bottom:1px dashed rgb(247, 245, 245);
+  white-space:nowrap;
+  overflow: hidden;
+  overflow-x: scroll;  
+  
+}
+.Item-bordey-img{
+  width: 130rpx;
+  height: 130rpx;
+  padding-left: 10rpx;
+}
+.sellorderItem-footer{
+  width: 100%;
+  height: 30%;
+}
+/* space-around：所有子组件平均分配在父容器的水平方向上，左右都有留空隙 */
+.contain{
+    display: flex;
+    justify-content: space-between;
+}
+.cancelOrder{
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border: 1px solid rgb(199, 181, 81);
+  border-radius: 20rpx;
+  color: rgb(199, 181, 81);
+  text-align: center;
+}
+.payment{
+  width: 100rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  background-color: rgb(199, 181, 81);
+  border-radius: 20rpx;
+  color: #fff;
+}
+/* 空白页 */
+.sellorderBlank{
+  height: 100%;
+  width:100%;
+  background-color: rgb(245, 239, 209);
+  position: relative;
+}
+.blankItem{
+  font-size: 1.8rem;
+  color: rgb(175, 172, 172);
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-left: -140rpx;
+  margin-top:60rpx;
+}

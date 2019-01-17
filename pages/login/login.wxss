@@ -1,0 +1,12 @@
+/* pages/login/login.wxss */
+page{
+  height: 100%;
+}
+.login{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f1f2;
+}

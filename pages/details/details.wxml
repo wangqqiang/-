@@ -1,0 +1,67 @@
+<!--pages/details/details.wxml-->
+<view class='details'>
+  <!-- 简要 -->
+  <view class='dSynopsis'>
+    <view class='dSynopsis-img'>
+      <image class='dSynopsisImg' src='{{film.poster}}'></image>
+      <text class='imgMask'></text>
+    </view>
+    <view class="padding10 dSynopsis-centent">
+      <!-- 视频、图片 -->
+      <view class='dSynopsis-video'>
+        <image class="videoImg" src='{{film.poster}}'></image>
+      </view>
+      <!-- 标题 -->
+      <view class='dSynopsisRight'>
+        <view class='dSynopsis-harder box'>
+          <text class='dSynopsisTitle'>{{film.title}}</text>
+          <text class='Titletext'>{{film.also_known_as}}</text>
+          <view class='fraction'>{{film.rating}}</view>
+        </view>
+        <view class='dSynopsis-body box'>
+          <text class='Titletext'>{{film.movieid}}</text>
+          <text class='Titletext'>{{film.genres}}</text>
+          <text class='Titletext'>{{film.release_date}}</text>
+          <text class='Titletext'>{{film.film_locations}}/{{film.language}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 故事 -->
+  <view class='story'>
+    <view class='storypadding' bindtap='upShow'>
+      <text class="film-text {{isDown ? 'auto-height' : ''}}">{{film.plot_simple}}</text>
+      <view class="fa {{!isDown ? 'fa-angle-down' : 'fa-angle-up'}}  fa-2x  storybtn"></view>
+    </view>
+  </view>
+  <!-- 演员 -->
+  <view class='actor'>
+    <view class='padding10 actorList'>
+      <!-- 导演 -->
+      <view class='actor-title'>
+        <view class='actorTitleH'>导演</view>
+        <view class='actorTitleB'>
+          <image class="titleBImg" src='{{film.poster}}'></image>
+        </view>
+        <view class='actorTitleF'>
+          <view>{{film.directors}}</view>
+        </view>
+      </view>
+      <!-- 演员 -->
+      <view class='actor-title' wx:for="{{actors}}" wx:key="{{index}}">
+          <view class='actorTitleH' wx:if="{{index == 0}}">演员</view>
+          <view class='actorTitleH' wx:else></view>
+          <view class='actorTitleB'>
+            <image class="titleBImg" src="{{film.poster}}"></image>
+          </view>
+          <view class='actorTitleF'>
+            <view class='actorTitleFplay'>{{actors}}</view>
+          </view>
+      </view>
+      
+    
+    </view>
+  </view>
+  <!-- 立即购票 -->
+  <view class='Goupiao'>立即购票</view>
+</view>

@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="citys">
+  <view style="padding:0 10rpx; ">当前城市 <text>{{curCity}}</text> </view>
+  <view wx:for='{{citys}}' wx:for-item='city' wx:key='city.id'>
+    <block wx:if="{{city.length > 0}}">
+      <view class='char'>{{index}}</view>
+
+      <view  class="Grid">
+      
+        <view 
+          class="Grid-cell" 
+          wx:for="{{city}}" 
+          wx:key='item.id'>
+          <navigator url="../cinema/cinema?id={{item.id}}" bindtap='goCinema' id='{{item.id}}' data-cityInfo='{{item}}'>
+          {{item.city_name}}
+          </navigator>
+        </view>
+        
+      </view>
+
+    </block>
+  </view>
+</view>

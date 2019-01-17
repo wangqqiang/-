@@ -1,0 +1,70 @@
+.pt-cart{
+  position: fixed;
+  top:65rpx;
+  left:0rpx;
+  width: 100%;
+  height: calc(100% - 170rpx);
+  z-index:11;
+}
+/* 遮罩层 */
+.pt-cart-mask{
+  position: absolute;
+  left: 0rpx;
+  top:0rpx;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.5);
+}
+/* 列表 */
+.pt-cart-list{
+  position: absolute;
+  left:0rpx;
+  bottom: 0rpx;
+  width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+/* 标题 */
+.pt-cart-list-title{
+  background-color: rgb(240, 241, 242);
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 10rpx 30rpx;
+  color: darkgray;
+}
+.pt-cart-list-title::after{
+  content:'';
+  display: block;
+  clear: both;
+}
+.pt-cartTitle-name{
+  float: left;
+}
+.pt-cartTitle-clear{
+  float: right;
+  font-size: 0.8rem;
+}
+/* 列表内容 */
+.pt-cart-list-content{
+  max-height: calc(100% - 200rpx);
+  background-color: white;
+  overflow-y: scroll;
+}
+.pt-cart-item{
+  display: flex;
+  padding: 25rpx;
+  color: rgb(199, 181, 81);
+}
+.pt-cartList-name{
+  flex: 1 0 50%;
+  color: darkgray;
+}
+.pt-cartList-price{
+  flex: 1 0 25%;
+}
+.pt-cartList-count{
+ flex: 1 0 25%;
+ padding-top: 5rpx;
+}

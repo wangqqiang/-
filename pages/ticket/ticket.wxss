@@ -1,0 +1,195 @@
+/* pages/ticket/ticket.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+/* .ticketBJ{
+  background-color: #fff;
+} */
+.ticket{
+  font-size: 0.8rem;
+  color: rgb(131, 126, 126);
+}
+/* 影院地址 */
+.ticket-harder{
+  margin:0 15rpx;
+  height: 150rpx;
+  padding: 10rpx 0;
+  display: flex;
+}
+/* 左部分 */
+.th-left{
+  flex: 1 0 80%;
+}
+.THL{
+  display: flex;
+  flex-direction: column;
+}
+.THLtitle{
+  color:black;
+}
+.THLcentent{
+  padding: 10rpx 0;
+  border-right: 1px solid rgb(209, 207, 207);
+  font-size: 0.8rem;
+}
+.THLfooter{
+  
+}
+/* 右部分 */
+.th-right{
+  flex: 1 0 20%;
+  text-align: center;
+  padding-top:25rpx;
+}
+
+/* 上映影片 */
+.ticket-body{
+  background-color: rgb(250, 248, 221);
+}
+.TBtitle{
+  font-size: 0.8rem;
+  padding:15rpx;
+}
+.TBbody{
+  width: 100%;
+  height: 400rpx;
+  background-color: #fff;
+  position: relative;
+}
+swiper {
+  height: 370rpx;
+}
+.bg-swiper{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 280rpx;
+  overflow: hidden;
+}
+.bg-img{
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+}
+.le-img {
+  width: 100%;
+  height: 100%;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  border: 1px solid white;
+}
+.le-active {
+  transform: scale(1) translateY(30rpx);
+}
+.movie-name{
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-top: 15rpx;
+  text-align: center;
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.slide-image{
+  width: 180rpx;
+  height: 260rpx;
+  transform-origin: center center;
+  transition: all 0.5s;
+}
+/* 影片场地 */
+.ticket-footer{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.TFtitle{
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  background-color: rgb(241, 238, 238);
+}
+/* 隐藏滚动条 */
+.TFtitle::-webkit-scrollbar {
+  display:none;
+}
+.TFTtime{
+  padding:0 30rpx;
+  white-space: nowrap;
+  text-align: center;
+}
+.TFitem{
+  font-size: 0.7rem;
+  padding: 0 15rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  background-color: rgb(250, 248, 221);
+}
+.TFIhui{
+  height: 35rpx;
+  width: 35rpx;
+  display: inline-block;
+  line-height: 35rpx;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  font-size: 0.5rem;
+  margin:10rpx;
+  background-color: rgb(245, 189, 125);
+}
+.TFfooter{
+  margin: 0 15rpx;
+}
+.TFFItem{
+  height: 200rpx;
+  border-bottom:1px solid rgb(241, 238, 238);
+  padding: 15rpx 0;
+  display:flex;
+}
+.TFF1{
+  flex: 1 0 20%;
+  text-align: center;
+  padding-top: 50rpx;
+}
+.TFF2{
+  flex: 1 0 40%;
+  text-align: center;
+  padding-top: 50rpx;
+}
+
+.TFF3{
+  flex: 1 0 20%;
+  text-align: center;
+  padding-top: 80rpx;
+  color: rgb(199, 181, 81);
+  font-size: 0.9rem;
+}
+.TFF4{
+  flex: 1 0 20%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 80rpx;
+}
+.endtime{
+  font-size: 1rem;
+  color: black;
+}
+.end{
+  font-size: 0.7rem;
+}
+.tehui{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 30rpx;
+  background-color: rgb(199, 181, 81);
+}

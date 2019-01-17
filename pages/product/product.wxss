@@ -1,0 +1,196 @@
+/* pages/product/product.wxss */
+/* 引用模板的wxss */
+@import "template/cartlist.wxss";
+
+page{
+  width: 100%;
+  height: 100%;
+}
+.saleGoods{
+  width: 100%;
+  height: 100%;
+}
+/* 导航地址 */
+.movie_title{
+  padding: 0 15rpx 15rpx 15rpx;
+  height:35rpx;
+  line-height: 35rpx;
+  width: 95%;
+  font-size: 0.9rem;
+  display: inline-block;
+  white-space:nowrap;
+  overflow: hidden;
+}
+.mapName{
+  padding: 0 30rpx;
+}
+.jianto{
+  font-size: 1.3rem;
+  float: right;
+}
+/* 特惠套餐 */
+.special{
+  color: rgb(148, 135, 135);
+  font-size: 30rpx;
+  height: 70rpx;
+  width: 100%;
+}
+.taocanImg{
+  width: 200%;
+  height: 55rpx;
+}
+/* 内容列表 */
+.contentList{
+  color: rgb(148, 135, 135);
+  font-size: 30rpx;
+  height: calc(100% - 240rpx);
+  width: 100%;
+  position: relative;
+}
+.contentCss{
+  height: 100%;
+  text-align: center;
+  float: left;
+}
+.contentLeft{
+  width: 170rpx;
+  background-color: rgb(242, 243, 201);
+}
+.contentRight{
+  width: calc(100% - 170rpx);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+}
+/* .contentRight::-webkit-scrollbar {
+  display: none;
+} */
+.specialRight{
+  width:calc(100% - 170rpx);
+  line-height: 70rpx;
+  position: fixed;
+  right:0px;
+  border-bottom: 1px solid rgb(175, 166, 166);
+  clear:both;
+  background-color: #fff;
+  z-index: 10;
+}
+.SingleItem{
+  text-align: center;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-bottom: 1px solid rgb(175, 166, 166);
+}
+.active{
+  background-color:#fff;
+}
+/* 商品详情 */
+.commodity{
+  position:absolute;
+  top:70rpx;
+  left:0;
+  width:100%;
+}
+.productInfor{
+  display: flex;
+  flex-direction:row;
+  padding:10rpx;
+  border-bottom: 1px solid rgb(175, 166, 166);
+} 
+/* 商品详情列表 */
+.listImg{
+  flex: 1 0 30%;
+  height: 200rpx;
+}
+.flex-item{
+  padding: 10rpx 0;
+  color: rgb(175, 170, 170);
+  text-align:left;
+}
+.listRight{
+  flex: 1 0 70%;
+  display: flex;
+  flex-direction:row;
+}
+.xiangxi{
+  width: 100%;
+  display: flex;
+  padding:0 15rpx;
+  flex-direction:column;
+}
+.Quantity{
+  float: right;
+}
+.movieName{
+  color: black;
+}
+.score{
+  text-align: left;
+  color:rgb(199, 181, 81);
+}
+.scoreRight{
+  float: left;
+  font-size: 40rpx;
+}
+.count{
+  float: left;
+  padding: 0 10rpx;
+  font-size: 30rpx;
+}
+/* 结算 */
+.settlement{
+  width: 100%;
+  height: 100rpx;
+  position:fixed;
+  z-index:22;
+}
+.settlementLeft{
+  width: 70%;
+  line-height: 100rpx;
+  color:rgb(199, 181, 81);
+  font-size: 40rpx;
+  display: inline-block;
+}
+.settlementRight{
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  background-color: rgb(196, 190, 190);
+}
+.money{
+  padding-left: 70rpx;
+}
+.shopping{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100rpx;
+  background-color: rgb(31, 29, 29);
+  display: inline-block;
+  opacity :0.7;
+  position: relative;
+  bottom:10px;
+  left:10px;
+
+}
+.circle{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40rpx;
+  background-color: red;
+  display: inline-block;
+  color: white;
+  font-size: 30rpx;
+  position: absolute;
+  top:-5rpx;
+  right: -5rpx;
+}
+/* 购物车的金色背景 */
+.hasCartlist{
+  background-color: rgb(199, 181, 81);
+}

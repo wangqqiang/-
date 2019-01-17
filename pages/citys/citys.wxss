@@ -1,0 +1,24 @@
+/**index.wxss**/
+
+.char{
+  padding:10rpx;
+  background-color: rgb(228, 225, 225);
+  border-top: 1px solid rgb(163, 159, 159);
+}
+
+.Grid {
+  /* width: 200px;
+  height: 150px; */
+  padding:10rpx;
+  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
+.Grid-cell {
+  box-sizing: border-box;
+  background-color: white;
+  flex: 1 0 25%;
+  height: 50px;
+}

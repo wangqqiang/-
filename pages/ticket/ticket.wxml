@@ -1,0 +1,77 @@
+<!--pages/ticket/ticket.wxml-->
+  <view class='ticket'>
+    <!-- 影院地址 -->
+    <view class='ticket-harder'>
+      <view class='th-left'>
+        <text class='THL THLtitle'>{{cinemaInfo.name}}</text>
+        <text class='THL THLcentent'>{{cinemaInfo.address}}</text>
+        <text class='THL THLfooter'>
+          <text class='fa fa-phone'></text>
+          <text>{{cinemaInfo.telephone}}</text>
+        </text>
+      </view>
+      <view class='th-right'>
+        <text class='THL fa fa-map-marker fa-2x'></text>
+        <text class='THL'>地图</text>
+      </view>
+    </view>
+    <!-- 上映影片 -->
+    <view class='ticket-body'>
+      <view class='TBtitle'>杜比影院、VIP、MX4D厅为特殊场次，小朋友也需要购票呦~</view>
+      <view class='TBbody'>
+        <!-- swiper模糊背景显示 -->
+        <view class='bg-swiper'>
+          <image class='bg-img' src='{{cinemaList[nowIdx].pic_url}}'></image>
+        </view>
+        <!-- swiper显示 -->
+        <swiper display-multiple-items='3' previous-margin='30px'  next-margin='30px' bindchange="swiperChange" current="{{nowIdx}}">
+          <!-- 左站位 -->
+          <swiper-item>
+            <image  class="slide-image" />
+          </swiper-item>
+          <swiper-item wx:for='{{cinemaList}}' wx:key='{{index}}'>
+              <!-- 动态等比例计算image的高度 -->
+              <image bindload='getHeight' style='height:{{swiperH}};' class='le-img {{nowIdx==index? "le-active":""}}' src='{{item.pic_url}}'  ></image>
+              <!-- 只显示当前的电影名字 -->
+              <view class='movie-name' wx:if="{{nowIdx==index}}">{{item.movieName}}</view>
+          </swiper-item>
+          <!-- 右站位 -->
+          <swiper-item>
+              <image  class="slide-image" />
+          </swiper-item>
+        </swiper>
+      </view>
+    </view>
+    <!-- 影片场地 -->
+    <view class='ticket-footer'>
+      <view class='TFtitle'>
+        <view  class='TFTtime'>
+          <text>今天{{datetime}}</text>
+          <text class='TFIhui'>惠</text>
+        </view>
+      </view>
+      <view class='TFitem'>
+        <text class='TFIhui'>惠</text>
+        <text>新春特惠，每个账号限购2张</text>
+      </view>
+      <view class='TFfooter' >
+        <!--  -->
+        <view class='TFFItem' wx:for="{{cinemaList[nowIdx].broadcast}}" wx:key="{{index}}">
+          <view class='TFF1'>
+            <view class='endtime'>{{item.time}}</view>
+            <view class='end'>散场</view>
+          </view>
+          <view class='TFF2'>
+            <view class='endtime'>{{item.language}}{{item.type}}</view>
+            <view class='end'>{{item.hall}}</view>
+          </view>
+          <view class='TFF3'>
+            <view>￥{{item.price}}</view>
+          </view>
+          <view class='TFF4'>
+            <view class='tehui'>购票</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>

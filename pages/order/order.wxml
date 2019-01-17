@@ -1,0 +1,55 @@
+<!--pages/order/order.wxml-->
+<view class='order'>
+  <!-- 地址 -->
+  <view class='order-citys'>{{cinema_info.cinemaName}}</view>
+  <!-- 卖品订单 -->
+  <view class="order-cart">
+    <view class='order-info' wx:for='{{cartlist}}' wx:key="item.id">
+      <!-- 商品 -->
+      <view class='order-commodity' >
+        <image class='Grid4 orderCommodityImg' src='{{item.img}}'></image>
+        <view class='Grid6'>
+          <text class='com commoodity-title'>{{item.title}}</text>
+          <text class='com commoodity-content'>{{item.des}}</text>
+          <text class='com commoodity-menir'>￥{{item.price}}</text>
+        </view>
+        <text class='Grid2'>X{{item.count}}</text>
+      </view>
+    </view>
+  </view>
+   <!-- 显示更多 -->
+  <view class='show-more' bindtap='loadmord' wx:if="{{list.length > 2}}">
+    <text wx:if="{{!isShowMore}}">显示更多</text>
+    <text wx:else>收起</text>
+    <text class="fa {{isShowMore ? 'fa-angle-up' : 'fa-angle-down'}}"></text>
+  </view>
+   <!-- 价格 -->
+  <view class='order-price'>
+    <text class='priceLeft'>价格</text>
+    <text class='priceRight'>￥{{totalPrice}}</text>
+  </view>
+  <!-- 其他 -->
+  <view class='other'>
+    <view class='otherOffer'>
+      <view class='otherOffer5'>卖品优惠</view>
+      <view class='otherOffer5 voucher'>
+        <text>暂无可用卖品券  </text>
+        <text class='fa fa-angle-right'></text>
+      </view>
+    </view>
+    <view class='otherOffer'>
+      <view class='otherOffer5'>卖品优惠</view>
+      <view class='otherOffer5 voucher'>
+        <text>暂无可用卖品券  </text>
+        <text class='fa fa-angle-right'></text>
+      </view>
+    </view>
+  </view>
+  <!-- 立即支付 -->
+  <view class='pay'>
+    <view class='payPrice'>
+      <view class='payPriceTitle'>应付 <text class='payPriceColor'>￥{{totalPrice}}</text> </view>
+    </view>
+    <view class='paybottom'>立即支付</view>
+  </view>
+</view>

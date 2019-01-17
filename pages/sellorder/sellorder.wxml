@@ -1,0 +1,31 @@
+<!--pages/sellorder/sellorder.wxml-->
+<view class='sellorder' wx:if="{{hasOrder}}">
+  <view class='sellorderBody' id="{{index}}" bindtap='orderDetail'  wx:for="{{goodsOrderList}}" wx:key="{{index}}">
+    <view class='sellorderList'>
+      <view class='sellorderItem'>
+        <!-- 代付款 -->
+        <view class='sellorderItem-header Items'>
+          <text class='SHleft'>{{item.orderTime}}</text>
+          <text class='SHright'>代付款</text>
+        </view>
+        <!-- 图片 -->
+        <view class='sellorderItem-bordey' >
+          <image class='Item-bordey-img' wx:for="{{item.orderData}}" wx:key="{{item.id}}" src='{{item.img}}'></image>
+        </view>
+        <!-- 取消订单 -->
+        <view class='sellorderItem-footer Items'>
+          <view>订单号：{{index}}</view>
+          <view class='cancelOrder' id='{{index}}' catchtap='cancelOrder'>取消订单</view>
+          <view class='payment'>付款</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 空白页 -->
+<view class="sellorderBlank" wx:else>
+  <view class='blankItem'>
+    <i class="fa fa-gift"></i>
+    <text>空空如也</text>
+  </view>
+</view>

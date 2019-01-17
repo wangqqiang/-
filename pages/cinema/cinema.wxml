@@ -1,0 +1,17 @@
+<!--pages/cinema/cinema.wxml-->
+<view class='cinemas'>
+  <view class="CurrentCity" bindtap='backCitys'>
+    <text>{{cityName}}</text>
+    <!-- 下箭头 -->
+    <text class="fa fa-angle-down"></text>
+  </view>
+  <view wx:for='{{cinemas}}' wx:for-item="cinema" wx:key="{{cinema.id}}">
+      <!-- 传单个值 data-for={{你好}}-->
+      <!-- 传多个值 data-item={{cinema}}-->
+      <view class="cinema" bindtap='goMovie' id="{{cinema.id}}" data-cinemainfo='{{cinema}}'>
+        <view class="title">{{cinema.cinemaName}}</view>
+        <view class="detailed">{{cinema.address}}</view>
+      </view>
+    
+  </view>
+</view>

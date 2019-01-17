@@ -1,0 +1,190 @@
+/* pages/details/details.wxss */
+page{
+  height: 100%;
+}
+.details{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(238, 237, 237);
+}
+/* 简介 */
+.dSynopsis{
+  width: 100%;
+  height: 400rpx;
+  margin-bottom: 15rpx;
+  background-color: #fff;
+  position:relative;
+}
+.padding10{
+  padding:20rpx;
+}
+.dSynopsis-centent{
+  height: 100%;
+  width: 95%;
+  position: absolute;
+  top:0;
+  left:0;
+}
+.dSynopsis-img{
+  height: 150rpx;
+  position:relative;
+  filter: blur(0.2rem);
+}
+.dSynopsisImg{
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+/* .imgMask{
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  display: block;
+  background-color: black;
+  opacity: 0.7;
+} */
+.dSynopsis-video{
+  float: left;
+  height: 90%;
+  width: 35%;
+}
+.videoImg{
+  width: 100%;
+  height: 100%;
+}
+/* 标题 */
+.dSynopsisRight{
+  float: right;
+  height: 90%;
+  width: 62%;
+  padding-left: 10rpx;
+}
+.dSynopsis-harder{
+ color: #fff;
+ margin-top:20rpx;
+ position: relative;
+}
+.fraction{
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: rgb(199, 181, 81);
+  color:#fff;
+  position: absolute;
+  top:5rpx;
+  right: 10rpx;
+}
+.dSynopsis-body{
+  margin-top:20rpx;
+}
+/* 自动换行 */
+.box {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+.dSynopsisTitle{
+  font-size: 1rem;
+}
+.Titletext{
+  padding: 12rpx 0;
+  font-size: 0.7rem;
+}
+/* 故事 */
+.story{
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 15rpx;
+  font-size: 0.8rem;
+}
+.storypadding{
+  padding:20rpx;
+  padding-bottom: 0rpx;
+}
+.film-text{
+  height:128rpx;
+  display:inline-block;
+  overflow: hidden;
+}
+.auto-height{
+  height:auto;
+}
+.storybtn{
+  width: 100%;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+/* 演员 */
+.actor{
+  height: 300rpx;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 15rpx;
+}
+.actorList{
+  height: 270rpx;
+  width: 100%;
+  /* flex实现横向滚动 */
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
+  flex-wrap: nowrap; 
+}
+/* 隐藏滚动条 */
+.actorList::-webkit-scrollbar {
+  display:none;
+}
+.actor-title{
+  height: 100%;
+  width: 150rpx;
+  /* flex实现横向滚动 */
+  white-space: nowrap;
+  padding-right:15rpx;
+}
+
+.actorTitleH{
+  font-size: 0.8rem;
+  height: 40rpx;
+}
+.actorTitleB{
+  height: 130rpx;
+  width: 130rpx;
+  padding: 10rpx;
+  padding-left:0rpx;
+  overflow: hidden;
+}
+.titleBImg{
+  width: 140rpx;
+  height: 140rpx;
+}
+.actorTitleF{
+  text-align: center;
+  font-size: 0.7rem;
+  overflow: hidden;
+}
+.actorTitleFplay{
+  width:100%;
+  line-clamp: 2;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 立即购票 */
+.Goupiao{
+  height: 80rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0rpx;
+  left:0;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 0.8rem;
+  background-color: rgb(199, 181, 81);
+}
